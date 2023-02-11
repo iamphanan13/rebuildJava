@@ -40,7 +40,19 @@ public class Student {
                 }
             }
         } while (!status);
+
+        System.out.print("Name: ");
+        this.name = scanner.next();
+        System.out.print("Age: ");
+        this.age = scanner.nextInt();
+        System.out.print("Course: ");
+        this.course = scanner.next();
+        System.out.print("Address: ");
+        this.address = scanner.next();
+        System.out.println("Medium Score: ");
+        this.mediumScore = scanner.nextFloat();
     }
+
 
     public String getId() {
         return id;
