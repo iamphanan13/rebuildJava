@@ -1,5 +1,8 @@
 package model;
 
+import java.util.List;
+import java.util.Scanner;
+
 public class Student {
     private String id;
     private String name;
@@ -18,6 +21,25 @@ public class Student {
         this.course = course;
         this.address = address;
         this.mediumScore = mediumScore;
+    }
+
+    public void inputStudent(List<Student> students) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input students information: ");
+        boolean status;
+        do {
+            status = true;
+            System.out.println("Student ID: ");
+            this.id = scanner.next();
+
+            for (Student st : students) {
+                if (st.getId().equalsIgnoreCase(this.id)) {
+                    System.out.println("This ID is available");
+                    status  = false;
+                    break;
+                }
+            }
+        } while (!status);
     }
 
     public String getId() {
