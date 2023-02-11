@@ -23,6 +23,18 @@ public class Student {
         this.mediumScore = mediumScore;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", course='" + course + '\'' +
+                ", address='" + address + '\'' +
+                ", mediumScore=" + mediumScore +
+                '}';
+    }
+
     public void inputStudent(List<Student> students) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input students information: ");
